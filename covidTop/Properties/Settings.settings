@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="covidTop.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="uri_rapidapi" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://covid-19-statistics.p.rapidapi.com/</Value>
+    </Setting>
+    <Setting Name="x_rapidapi_key" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">8d9f898804msh6caca6d34d2f26ep181e76jsn7e0fc5e62a71</Value>
+    </Setting>
+    <Setting Name="x_rapidapi_host" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">covid-19-statistics.p.rapidapi.com</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

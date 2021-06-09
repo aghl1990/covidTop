@@ -1,0 +1,44 @@
+﻿@model IEnumerable<covidTop.Models.Report>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewReport</title>
+</head>
+<body> 
+    <table class="table">
+        <tr> 
+            <th>
+                @ViewBag.listRegions
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cases)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Deaths)
+            </th> 
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr > 
+            <td>
+                @(item.Name != "" ? item.Name : "Province name not found")
+            </td>
+            <td> 
+                @string.Format("{0:#,0}", item.Cases)
+            </td>
+            <td> 
+                @string.Format("{0:#,0}", item.Deaths)
+            </td> 
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿
+@model IEnumerable<covidTop.Models.Report>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form action="" method="post"> 
+    <div class="row" style="text-align:center; padding: 10px; margin: 10px;">
+        <div class="col-md-8"> 
+                <div class="col-md-4">
+                    @Html.DropDownList("regionList", (List<SelectListItem>)ViewBag.listRegions, "Regions", new { @class = "form-control" })
+                </div>
+                <div class="col-md-2">
+                    <input type="button" value="Report" id="btnReport" />
+                </div> 
+        </div> 
+        <div class="col-md-4">
+            <div style="text-align:center; padding:0 0 0 0;">
+                <button type="submit" value="ExportToXml" name="action" style="width:100px;">
+                    <i class="far fa-file-code"></i>XML
+                </button>
+                <button type="submit" value="ExportToJson" name="action" style="width:100px;">
+                    <i class="fab fa-js-square"></i>JSON
+                </button>
+                <button type="submit" value="ExportToCsv" name="action" style="width:100px;">
+                    <i class="fas fa-file-csv"></i>CSV
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="divReport" class="row" style="text-align:left; padding: 10px; margin: 10px;">
+    </div>
+</form>
+
+
+
